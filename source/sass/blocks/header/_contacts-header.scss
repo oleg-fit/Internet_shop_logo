@@ -1,0 +1,121 @@
+.contacts-header {
+  display: flex;
+  justify-content: center;
+
+  // .contacts-header__column
+  &__column {
+    padding-right: 30px;
+    padding-left: 30px;
+
+    border-left: 1px solid $color-white;
+
+    &:first-child {
+      border: 0;
+    }
+  }
+
+  // .contacts-header__item--icon
+  &__item--icon {
+    padding-left: 37px;
+
+    background-image: url("../img/header/phone.png");
+    background-repeat: no-repeat;
+    background-position: left;
+  }
+
+  // .contacts-header__label
+  &__label {
+    margin-bottom: 5px;
+
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 18px;
+
+    color: $color-white;
+  }
+
+  // .contacts-header__phone
+  &__phone {
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 18px;
+
+    text-decoration: none;
+
+    color: $color-white;
+
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 1180px) {
+  .contacts-header {
+    justify-content: flex-end;
+
+    // .contacts-header__column
+    &__column {
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+
+    // .contacts-header__item--icon
+    &__item--icon {
+      padding-left: 25px;
+
+      background-size: 15px;
+    }
+
+    // .contacts-header__phone
+    &__phone {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .contacts-header {
+    // .contacts-header__column
+    &__column {
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .contacts-header {
+    // .contacts-header__column
+    &__column {
+      padding-right: 0;
+      padding-left: 0;
+    }
+
+    // .contacts-header__item--icon
+    &__item--icon {
+      padding-left: 0;
+
+      background-image: none;
+    }
+
+    // .contacts-header__label
+    &__label {
+      display: none;
+    }
+
+    // .contacts-header__phone
+    &__phone {
+      display: inline-block;
+      vertical-align: middle;
+
+      width: 19px;
+      height: 25px;
+
+      font-size: 0;
+
+      background-image: url("../img/header/phone.png");
+      background-repeat: no-repeat;
+      background-position: left;
+    }
+  }
+}

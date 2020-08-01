@@ -1,0 +1,129 @@
+.info-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  // .info-header__column
+  &__column {
+    padding-right: 54px;
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  // .info-header__callback
+  &__callback {
+    display: inline-block;
+    vertical-align: middle;
+
+    padding-left: 32px;
+
+    line-height: 20px;
+
+    color: $color-java;
+
+    background-image: url("../img/header/callback.png");
+    background-repeat: no-repeat;
+    background-position: left;
+
+    white-space: nowrap;
+  }
+
+  // .info-header__schedule
+  &__schedule {
+    padding-left: 37px;
+
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 300;
+
+    color: $color-dusty-gray;
+
+    background-image: url("../img/header/schedule.png");
+    background-repeat: no-repeat;
+    background-position: left;
+
+    span {
+      font-weight: 900;
+    }
+  }
+
+  // .info-header__cart
+  &__cart {
+    position: relative;
+
+    display: inline-block;
+    vertical-align: middle;
+
+    width: 43px;
+    height: 43px;
+
+    background-image: url("../img/header/cart.png");
+    background-repeat: no-repeat;
+    background-position: left;
+
+    span {
+      position: absolute;
+      top: -3px;
+      right: -25px;
+
+      padding-right: 11px;
+      padding-left: 11px;
+
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 25px;
+      color: $color-white;
+
+      border-radius: 20px;
+      background-color: $color-jaffaa;
+    }
+  }
+}
+
+@media (max-width: 1180px) {
+  .info-header {
+    // .info-header__column
+    &__column {
+      padding-right: 30 / 1180 * 100vw;
+    }
+
+    // .info-header__callback
+    &__callback {
+      padding-left: 0;
+
+      background-image: none;
+    }
+
+    // .info-header__schedule
+    &__schedule {
+      padding-left: 0;
+
+      background-image: none;
+    }
+
+    // .info-header__cart
+    &__cart {
+      span {
+        right: -10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .info-header {
+    // .info-header__callback
+    &__callback {
+      font-size: 22px;
+
+      color: $color-dusty-gray;
+    }
+
+    // .info-header__schedule
+    &__schedule {
+      display: none;
+    }
+  }
+}
